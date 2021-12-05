@@ -50,9 +50,11 @@ final class BinarySearch {
     } else {
         int medium = (int) ((highIndex + lowIndex) / 2);
         if (userArray[medium] > userNumber) {
-            returnValue = binarySearch(userArray, userNumber, lowIndex, (medium - 1));
+            returnValue = binarySearch(userArray,
+                                       userNumber, lowIndex, (medium - 1));
         } else if (userArray[medium] < userNumber) {
-            returnValue = binarySearch(userArray, userNumber, (medium + 1), highIndex);
+            returnValue = binarySearch(userArray,
+                                       userNumber, (medium + 1), highIndex);
         } else {
             returnValue = medium;
         }
