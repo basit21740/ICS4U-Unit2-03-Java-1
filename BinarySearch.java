@@ -2,9 +2,9 @@
 * This program generates 250 random numbers in an array
 * and allows the user to search the array for a number.
 *
-* @author  Mr Coxall
-* @version 0.5
-* @since   2020-09-01
+* @author  Felipe Garcia Affonso
+* @version 1.0
+* @since   2021-12-04
 */
 
 import java.util.Random;
@@ -44,8 +44,20 @@ final class BinarySearch {
   static int binarySearch(final int[] userArray, final int userNumber,
                           final int lowIndex, final int highIndex) {
     // solve this function!
-
-    return -1;
+    int returnValue;
+    if (lowIndex > highIndex) {
+        returnValue = -1;
+    } else {
+        int medium = (int) ((highIndex + lowIndex) / 2);
+        if (userArray[medium] > userNumber) {
+            returnValue = binarySearch(userArray, userNumber, lowIndex, (medium - 1));
+        } else if (userArray[medium] < userNumber) {
+            returnValue = binarySearch(userArray, userNumber, (medium + 1), highIndex);
+        } else {
+            returnValue = medium;
+        }
+    }
+    return returnValue;
   }
 
   public static void main(final String[] args) {
