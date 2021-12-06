@@ -105,7 +105,11 @@ final class BinarySearch {
 
         // Outputing the results of the search
         System.out.println();
-        System.out.println("Your number is in index: " + searchResult);
+        if (searchResult < 0 ) {
+            System.out.println("The number is not here.");
+        } else {
+            System.out.println("Your number is in index: " + searchResult);
+        }
       }
 
       // Catches and tells the user that an error occured
@@ -113,5 +117,7 @@ final class BinarySearch {
       System.out.println();
       System.out.println("ERROR: Invalid Input");
     }
+
+    System.out.println("\nDone.");
   }
 }
