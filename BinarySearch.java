@@ -105,7 +105,7 @@ final class BinarySearch {
 
         // Outputing the results of the search
         System.out.println();
-        if (searchResult < 0 ) {
+        if (searchResult < 0) {
             System.out.println("The number is not here.");
         } else {
             System.out.println("Your number is in index: " + searchResult);
