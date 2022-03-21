@@ -2,7 +2,7 @@
 * This program generates 250 random numbers in an array
 * and allows the user to search the array for a number.
 *
-* @author  Felipe Garcia Affonso
+* @author  Abdul Basit Butt
 * @version 1.0
 * @since   2021-12-04
 */
